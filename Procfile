@@ -1,2 +1,2 @@
-web: build/install/personalsitebackend/bin/personalsitebackend
+web: build/classes/kotlin/main/com/jackmorrison/personalsitebackend
 
