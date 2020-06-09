@@ -1,2 +1,2 @@
-web: build/install/kotlinserver/bin/kotlinserver
+web: build/install/personalsitebackend/bin/personalsitebackend
 
