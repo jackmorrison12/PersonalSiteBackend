@@ -11,7 +11,9 @@ import io.ktor.routing.routing
 import io.ktor.server.engine.embeddedServer
 import io.ktor.server.netty.Netty
 
+
 fun main(args: Array<String>) {
+
 
     val port = System.getenv("PORT")?.toInt() ?: 23567
     embeddedServer(Netty,port) {
@@ -23,6 +25,13 @@ fun main(args: Array<String>) {
         routing {
             get("") {
                 call.respond("I'm alive!")
+
+                val dao = FragmentDAO()
+//                val saveResult = dao.save("{\"type\":\"song\",\"imgUrl\":\"https://jackmorrison.xyz\",\"time\":\"2020-01-01\",\"body\":\"Testing\"}")
+//                println(saveResult)
+                val result = dao.getAll()
+                println(result)
+
             }
             get("hello") {
                 call.respond(HttpStatusCode.Accepted, "Hello")
